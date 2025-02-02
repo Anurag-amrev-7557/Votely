@@ -96,26 +96,23 @@ html, body {
     display: none;
     list-style: none;
     position: absolute;
-    width: 95%;
+    width: 40%;
     right: 0.6rem;
     top: 55px;
     margin: 0;
     padding: 0;
     border-radius: 1rem;
-    background-color: rgba(255,255,255, 0.4);
-    backdrop-filter: blur(10px);
+    background-color: #fff;
 }
 
 .mobile-menu li {
-    padding: 12px 0;
-    justify-content: end;
+    padding: 10px 0;
 }
 
 .mobile-menu a {
     display: flex;
     padding: 0.4rem 1rem;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
     text-decoration: none;
     color: #333;
@@ -396,7 +393,7 @@ section {
 
 .stepguide-heading h1 {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     background: linear-gradient(to right, #ae4424 0%, #a94cdb 100%);
     -webkit-background-clip: text;
@@ -408,7 +405,7 @@ section {
 
 .stepguide-heading h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 1rem 0;
 }
 
@@ -441,9 +438,8 @@ section {
 }
 
 .step {
-    background-color: rgba(255,255, 255, 0.1);
-    backdrop-filter: blur(5px);
     border-radius: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .steps-container .step h3 {
@@ -467,7 +463,7 @@ section {
 }
 
 .steps-container img {
-    width: 75%;
+    width: 70%;
     height: auto;
     border-radius: 0.5rem;
 }
@@ -515,7 +511,7 @@ section {
     }
 
     .steps-container .step h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .steps-container .step p {
@@ -633,7 +629,7 @@ section {
 
 .choose-container h1{
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
     background: linear-gradient(to right, #ae4424 0%, #a94cdb 100%);
     -webkit-background-clip: text;
@@ -645,7 +641,7 @@ section {
 
 .choose-container h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 1rem 0;
     color: white;
 }
@@ -671,30 +667,8 @@ section {
 }
 
 .footer {
-    padding: 3rem 5rem;
-    justify-content: start;
-    text-align: start;
-}
-
-.footer .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.footer .upper-text {
-    color: #333;
-    font-size: 1rem;
-    font-weight: 550;
-}
-
-.upper-text {
-    margin-top: 0.5rem;
-}
-
-.upper-text a {
-    color: #273341;
-    font-size: 0.95rem;
+    padding: 3rem;
+    background-color: #f8f8f8;
 }
 
 .upper {
@@ -702,112 +676,97 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
+}
+
+.upper-text, .upper-text a {
+    color: #273341;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.sub-upper-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sub-upper-text img {
+    width: 40px;
+    height: auto;
 }
 
 .lower {
     display: flex;
-    justify-content: start;
-    gap: 5rem;
-    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
-.part .part-heading {
-    font-size: 0.9rem;
+.part {
+    flex: 1;
+    min-width: 200px;
+}
+
+.part-heading {
+    font-size: 1rem;
+    font-weight: 600;
     color: #6f6f6f;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.part li {
-    padding: 0.5rem 0;
-    list-style: none;
-    font-weight: 600;
-}
-
-.part ul {
-    margin: 0;
-    padding: 0;
+.part-content {
     margin-top: 1rem;
 }
 
 .part-icon-links {
-    margin-top: 2rem;
-    display: grid;
-    gap: 1rem;
+    display: flex;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.part-content ul {
+    list-style: none;
+    font-weight: 550;
+    margin: 0;
+    padding: 0;
+}
+
+.part-content li {
+    padding: 0.5rem 0;
+}
+
+.part-content li a {
+    text-decoration: none;
+    color: #333;
 }
 
 .part-icon-links svg {
-    color: #000;
+    color: #333;
+    width: 24px;
+    height: 24px;
 }
 
-/* Media Queries */
-
-/* Tablet View */
 @media (max-width: 768px) {
     .footer {
-        padding: 2rem 3rem;
+        padding: 2rem;
     }
 
     .upper {
         flex-direction: column;
-        align-items: start;
-        text-align: left;
-    }
-
-    .lower {
-        flex-direction: row;
-        gap: 3rem;
+        text-align: center;
     }
 
     .part {
         width: 100%;
     }
-
-    .part-icon-links {
-        justify-content: start;
-        margin-top: 1.5rem;
-    }
-
-    .upper-text {
-        margin-top: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 1.5rem 2rem;
-    }
-
-    .upper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lower {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .part {
-        width: 40%;
-    }
-
-    .part a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    .part-icon-links {
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-    }
-
-    .upper-text {
-        margin-top: 1rem;
+        padding: 1.5rem;
     }
 }
